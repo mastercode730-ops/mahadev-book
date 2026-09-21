@@ -66,6 +66,8 @@ export default function Hero() {
           padding: 3rem 0 2.5rem;
           background: radial-gradient(circle at 80% 20%, rgba(216, 169, 0, 0.07) 0%, transparent 60%);
           border-bottom: 1px solid var(--border);
+          overflow: hidden;
+          width: 100%;
         }
 
         .hero-grid {
@@ -73,11 +75,15 @@ export default function Hero() {
           grid-template-columns: 1.15fr 0.85fr;
           gap: 2.5rem;
           align-items: center;
+          width: 100%;
+          max-width: 100%;
         }
 
         .hero-content {
           display: flex;
           flex-direction: column;
+          width: 100%;
+          max-width: 100%;
         }
 
         .hero-title {
@@ -87,6 +93,8 @@ export default function Hero() {
           line-height: 1.25;
           margin-bottom: 1.2rem;
           letter-spacing: -0.02em;
+          word-break: break-word;
+          overflow-wrap: break-word;
         }
 
         .hero-desc {
@@ -94,6 +102,8 @@ export default function Hero() {
           font-size: 1.05rem;
           line-height: 1.7;
           margin-bottom: 1.8rem;
+          word-break: break-word;
+          overflow-wrap: break-word;
         }
 
         .hero-cta-group {
@@ -102,11 +112,13 @@ export default function Hero() {
           gap: 1rem;
           margin-bottom: 1.25rem;
           flex-wrap: wrap;
+          width: 100%;
         }
 
         .btn-icon {
           width: 17px;
           height: 17px;
+          flex-shrink: 0;
         }
 
         .hero-subtext {
@@ -115,12 +127,17 @@ export default function Hero() {
           margin-top: 0.3rem;
           margin-bottom: 0;
           letter-spacing: 0.02em;
+          word-break: break-word;
+          overflow-wrap: break-word;
+          line-height: 1.5;
         }
 
         .hero-visual {
           display: flex;
           justify-content: center;
           align-items: center;
+          width: 100%;
+          max-width: 100%;
         }
 
         .visual-card-wrap {
@@ -131,6 +148,10 @@ export default function Hero() {
           border-radius: 8px;
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 25px rgba(216, 169, 0, 0.08);
           transition: transform 0.3s ease, border-color 0.3s ease;
+          width: 100%;
+          max-width: 480px;
+          box-sizing: border-box;
+          overflow: hidden;
         }
 
         .visual-card-wrap:hover {
@@ -141,9 +162,10 @@ export default function Hero() {
         .hero-badge-img {
           width: 100%;
           height: auto;
-          max-width: 460px;
+          max-width: 100%;
           display: block;
           border-radius: 6px;
+          object-fit: contain;
         }
 
         @media (max-width: 900px) {
@@ -177,7 +199,8 @@ export default function Hero() {
           }
 
           .visual-card-wrap {
-            max-width: 380px;
+            max-width: 100%;
+            padding: 0.35rem;
           }
         }
       `}</style>

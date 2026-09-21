@@ -327,6 +327,21 @@ export default function Features() {
             height: 105px;
           }
         }
+
+        @media (max-width: 380px) {
+          .circle-ring {
+            width: 90px;
+            height: 90px;
+          }
+
+          .circle-stat-val {
+            font-size: 0.98rem;
+          }
+
+          .feature-item-card {
+            padding: 1.25rem 0.85rem;
+          }
+        }
       `}</style>
     </section>
   );
